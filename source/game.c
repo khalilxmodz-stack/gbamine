@@ -377,8 +377,13 @@ void game_init(void)
     game.show_help = 1;
     game.want_place = 0;
     game.want_break = 0;
-    game.prev_keys = KEY_MASK;           /* ignore keys held during boot */
+    game.prev_keys = KEY_MASK;/* ignore keys held during boot */
 
+
+    if (cheatCode == 1){
+        game.dirt += 90;
+    }
+    
     hud_draw();
     title_draw();
     render();
