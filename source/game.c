@@ -25,6 +25,7 @@ u8 world[WORLD_H][WORLD_W];
 static const s8 DX[4] = { 0, 1, 0, -1 };
 static const s8 DY[4] = { -1, 0, 1, 0 };
 int cheatCode = 0;
+int start_keyCode = 0;
 //if (cheatCode = 1) == block_infinit
 
 /* ---------------------------------------------------------------------- */
@@ -310,6 +311,7 @@ void game_frame(void)
     game.prev_keys = keys;
 
     if (pressed & KEY_START) {
+        start_keyCode == 1;
         if (game.state == STATE_TITLE) {
             game.state = STATE_PLAY;
             overlay_clear();
@@ -379,10 +381,13 @@ void game_init(void)
     game.want_break = 0;
     game.prev_keys = KEY_MASK;/* ignore keys held during boot */
 
-
-    if (cheatCode == 1){
+    if (start_keyCode == 1){
+        cheatCode == 1;
+        if (cheatCode == 1){
         game.dirt += 90;
+      }
     }
+    
     
     hud_draw();
     title_draw();
