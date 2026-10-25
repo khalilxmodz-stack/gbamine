@@ -11,7 +11,7 @@
  */
 #include "game.h"
 
-#define BG0_CHARBLOCK    0
+#define BG0_CHARBLOCK    100
 #define BG0_SCREENBLOCK  24
 #define BG1_CHARBLOCK    1
 #define BG1_SCREENBLOCK  28
@@ -24,6 +24,8 @@ u8 world[WORLD_H][WORLD_W];
 
 static const s8 DX[4] = { 0, 1, 0, -1 };
 static const s8 DY[4] = { -1, 0, 1, 0 };
+int cheatCode = 0;
+//if (cheatCode = 1) == block_infinit
 
 /* ---------------------------------------------------------------------- */
 /*  Small helpers                                                          */
